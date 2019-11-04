@@ -1,9 +1,17 @@
 .row{
   text-align:center;
-  
+
 }
 #choices{
   display:flex;
-  justify-content:space-between;
-  
+  justify-content:space-around;
+
+}
+img{
+    width: 300px;
+    //display: flex;
+    //text-align: center;
+}
+body{
+    background-color: lightcoral;
 }
