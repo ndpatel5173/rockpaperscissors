@@ -13,31 +13,45 @@ $("#shoot").click(function(){
        console.log(num);
     if (num >= 0.60){
          $("#computerChoice").text("rock");
-        var computerChoice1 = rock; 
+        var computerChoice1 = "rock"; 
     }
     else if(num < 0.60 && num >= 0.30){
          $("#computerChoice").text("paper");
-        var computerChoice2 = paper;
+         var computerChoice2 = "paper";
     }
-    else if(num < 0.30 && num >=0){
+    else if(num< 0.30 && num >= 0){
          $("#computerChoice").text("scissors");
-        var computerChoice3 = scissors;
+         var computerChoice3 = "scissors";
     }
 //else if statements for comparing
-    // userChoice = answer      computerChoice = answer2
-    let answer1 = rock
-    let answer2 = paper
-    let answer3 = scissors
-    //let answer2 = $("#computerChoice").val();
+    if((answer === "rock") && (computerChoice1 === "rock")){
+         $("#result").text("TIE!!!");
+    }
+    else if((answer === "rock") && (computerChoice2 === "paper")){
+         $("#result").text("Computer Wins!!!");
+    }
+    else if((answer === "rock") && (computerChoice3 === "scissors")){
+         $("#result").text("You Win!!!");
+    }
 
-    if(answer1 === computerChoice1){
-        $("#result").text("TIE!!!");
+    else if((answer === "paper") && (computerChoice2 === "paper")){
+         $("#result").text("TIE!!!");
     }
-    else if(answer2 === computerChoice2){
-        $("#result").text("TIE!!!");
+    else if((answer === "paper") && (computerChoice1 === "rock")){
+         $("#result").text("You Win!!!");
     }
-    else if(answer3 === computerChoice3){
-        $("#result").text("TIE!!!");
+    else if((answer === "paper") && (computerChoice3 === "scissors")){
+         $("#result").text("Computer Wins!!!");
+    }
+
+    else if((answer === "scissors") && (computerChoice3 === "scissors")){
+         $("#result").text("TIE!!!");
+    }
+    else if((answer === "scissors") && (computerChoice1 === "rock")){
+         $("#result").text("Computer Wins!!!");
+    }
+    else if((answer === "scissors") && (computerChoice2 === "paper")){
+         $("#result").text("You Win!!!");
     }
 });
 
